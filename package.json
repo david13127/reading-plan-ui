@@ -11,8 +11,10 @@
     "core-js": "^3.6.5",
     "element-plus": "^2.1.7",
     "element-ui": "^2.15.6",
+    "node-sass": "4.14.1",
     "primeicons": "^5.0.0",
     "primevue": "^3.12.4",
+    "style-loader": "^3.3.1",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
@@ -36,7 +38,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "typescript": "^4.1.6"
+    "sass-loader": "10.0.4",
+    "typescript": "^4.1.6",
+    "vue-loader-v16": "^16.0.0-beta.5.4"
   },
   "eslintConfig": {
     "root": true,
@@ -44,12 +48,16 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "@vue/standard",
       "@vue/typescript/recommended"
     ],
     "parserOptions": {
       "ecmaVersion": 2020
+    },
+    "rules": {
+      "space-before-function-paren": "off",
+      "vue/no-dupe-keys": "off"
     }
   },
   "browserslist": [

@@ -6,9 +6,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { Component, defineComponent } from 'vue'
 
-const HelloWorld = defineComponent({
+const HelloWorld : Component = defineComponent({
   props: {
     msg: String
   },

@@ -1,7 +1,8 @@
 <template>
   <div class="home">
+    <Toast position="bottom-right" />
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld msg="Hello Vue"/>
   </div>
 </template>
 

@@ -609,10 +609,10 @@ export default Home
 <style scoped lang="scss">
 ::v-deep(.dock-demo) {
   .dock-window {
-    width: 100%;
-    height: 450px;
-    position: relative;
-    background-image: url('https://www.primefaces.org/wp-content/uploads/2021/02/primevue-blog.jpg');
+    width: 99%;
+    height: 93%;
+    position: absolute;
+    background-image: url('../assets/images/book.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

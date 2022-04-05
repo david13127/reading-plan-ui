@@ -6,13 +6,9 @@
 
       <Menubar :model="menubarItems">
         <template #start>
-          <i class="pi pi-apple"></i>
+          <img class="pi-readplan" />
         </template>
         <template #end>
-          <i class="pi pi-video" />
-          <i class="pi pi-wifi" />
-          <i class="pi pi-volume-up" />
-          <span>Fri 13:07</span>
           <i class="pi pi-search" />
           <i class="pi pi-bars" />
         </template>
@@ -27,9 +23,9 @@
               v-tooltip.top="item.label"
               @click="onDockItemClick($event, item)"
             >
-              <img
-                :alt="item.label"
-                src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png"
+              <Button
+                class="p-button-sm p-button-text"
+                :label="item.label"
                 style="width: 100%"
               />
             </a>
@@ -38,7 +34,7 @@
 
         <Dialog
           v-model:visible="displayTerminal"
-          header="Terminal"
+          header="控制台"
           :breakpoints="{ '960px': '50vw' }"
           :style="{ width: '40vw' }"
           :maximizable="true"
@@ -51,7 +47,7 @@
 
         <Dialog
           v-model:visible="displayFinder"
-          header="Finder"
+          header="检索"
           :breakpoints="{ '960px': '50vw' }"
           :style="{ width: '40vw' }"
           :maximizable="true"
@@ -318,10 +314,10 @@ const Home: Component = defineComponent({
       }
     ])
     const toast = useToast()
-    const dockItems = ref([
+    const dockItems = [
       {
         label: 'Finder',
-        icon: 'https://primefaces.org/primevue/demo/images/dock/finder.svg',
+        icon: '../assets/images/thirdleave.png',
         command: () => {
           displayFinder.value = true
         }
@@ -331,31 +327,6 @@ const Home: Component = defineComponent({
         icon: 'https://primefaces.org/primevue/demo/images/dock/terminal.svg',
         command: () => {
           displayTerminal.value = true
-        }
-      },
-      {
-        label: 'App Store',
-        icon: 'https://primefaces.org/primevue/demo/images/dock/appstore.svg',
-        command: () => {
-          toast.add({
-            severity: 'error',
-            summary: 'An unexpected error occurred while signing in.',
-            detail: 'UNTRUSTED_CERT_TITLE',
-            group: 'tc',
-            life: 3000
-          })
-        }
-      },
-      {
-        label: 'Safari',
-        icon: 'https://primefaces.org/primevue/demo/images/dock/safari.svg',
-        command: () => {
-          toast.add({
-            severity: 'warn',
-            summary: 'Safari has stopped working',
-            group: 'tc',
-            life: 3000
-          })
         }
       },
       {
@@ -380,12 +351,8 @@ const Home: Component = defineComponent({
           })
         }
       }
-    ])
+    ]
     const menubarItems = ref([
-      {
-        label: 'Finder',
-        class: 'menubar-root'
-      },
       {
         label: 'File',
         items: [
@@ -628,6 +595,12 @@ export default Home
     padding-bottom: 0;
     border-radius: 0;
 
+    .pi-readplan {
+      background-image: url('../assets/images/thirdleave.png');
+      background-position: center;
+      height: 35px;
+      width: 75px;
+    }
     .menubar-root {
       font-weight: bold;
       padding: 0 1rem;

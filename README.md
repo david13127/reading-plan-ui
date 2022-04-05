@@ -1,4 +1,4 @@
-# reading-plan-ui
+# thirdleave-ui
 
 ## Project setup
 ```

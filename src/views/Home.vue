@@ -76,6 +76,12 @@
         </Galleria>
       </div>
     </div>
+    <div style="position: absolute; height: 2%; backgound: gray; bottom: 2px; margin-left: 40%; z-index: 9">
+      <span>©2022 三叶小窝&nbsp;</span>
+      <span>
+        <a href="http://beian.miit.gov.cn/" target="_blank">蜀ICP备2022009133号-1</a>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -577,7 +583,7 @@ export default Home
 ::v-deep(.dock-demo) {
   .dock-window {
     width: 99%;
-    height: 93%;
+    height: 92%;
     position: absolute;
     background-image: url('../assets/images/book.gif');
     background-repeat: no-repeat;

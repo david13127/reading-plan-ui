@@ -14,12 +14,15 @@ import Terminal from 'primevue/terminal'
 import Menubar from 'primevue/menubar'
 import Dock from 'primevue/dock'
 import Tooltip from 'primevue/tooltip'
+import element from 'element-plus'
+import 'element-plus/dist/index.css'
 
 import 'primevue/resources/themes/saga-blue/theme.css'
 import 'primeicons/primeicons.css'
 
 const app = createApp(App)
 app.use(store).use(router).use(Primevue).use(ToastService)
+app.use(element)
 app.component('Toast', Toast).component('Button', Button).component('TerminalService', TerminalService)
   .component('Dialog', Dialog).component('Galleria', Galleria).component('Tree', Tree)
   .component('Terminal', Terminal).component('Menubar', Menubar).component('Dock', Dock)
